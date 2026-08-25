@@ -1,4 +1,10 @@
+"use client";
+
+import { useState } from "react";
+
 export default function Home() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <main className="min-h-screen bg-[#121212] text-white">
 
@@ -6,36 +12,34 @@ export default function Home() {
           FLOATING GLASS HEADER
       ========================== */}
       <div className="sticky top-0 z-50 px-3 pt-3 md:px-4">
-        <header className="relative mx-auto max-w-7xl overflow-hidden rounded-2xl border border-white/20 bg-black/35 shadow-[0_12px_40px_rgba(0,0,0,0.55),0_0_20px_rgba(255,255,255,0.04)] backdrop-blur-xl">
+        <header className="relative mx-auto max-w-7xl rounded-2xl border border-white/20 bg-black/35 shadow-[0_12px_40px_rgba(0,0,0,0.55),0_0_20px_rgba(255,255,255,0.04)] backdrop-blur-xl">
 
-          {/* Subtle chrome highlight across top */}
+          {/* Chrome highlight */}
           <div className="pointer-events-none absolute inset-x-12 top-0 h-px bg-gradient-to-r from-transparent via-white/70 to-transparent" />
 
           <div className="flex items-center justify-between px-5 py-3 md:px-8">
-            
-            {/* Lightbulb Logo */}
+
+            {/* Lightbulb */}
             <a
               href="#top"
               aria-label="Swift Fabrications home"
               className="group relative block h-9 w-9 shrink-0"
             >
-              {/* Light Off */}
               <img
                 src="/images/logo/icon-on-lightbulb.svg"
                 alt="Swift Fabrications"
-                className="absolute inset-0 h-full w-full object-contain opacity-100 transition-all duration-300 group-hover:scale-105 group-hover:opacity-0"
+                className="absolute inset-0 h-full w-full object-contain opacity-100 transition-all duration-300 group-hover:opacity-0"
               />
 
-              {/* Light On */}
               <img
                 src="/images/logo/icon-off-lightbulb.svg"
                 alt=""
                 aria-hidden="true"
-                className="absolute inset-0 h-full w-full object-contain opacity-0 transition-all duration-300 group-hover:scale-105 group-hover:opacity-100 group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]"
+                className="absolute inset-0 h-full w-full object-contain opacity-0 transition-all duration-300 group-hover:opacity-100"
               />
             </a>
 
-            {/* Navigation */}
+            {/* Desktop Navigation */}
             <nav className="hidden items-center gap-7 md:flex">
               <a
                 href="#services"
@@ -60,13 +64,93 @@ export default function Home() {
 
               <a
                 href="#contact"
-                className="text-sm font-medium text-zinc-100 transition duration-300 hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.45)]"
+                className="text-sm font-medium text-zinc-100 transition duration-300 hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]"
               >
                 Get a Quote
               </a>
             </nav>
 
+            {/* Mobile Hamburger */}
+            <button
+              type="button"
+              aria-label="Open navigation menu"
+              aria-expanded={menuOpen}
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="relative flex h-11 w-11 flex-col items-center justify-center gap-[5px] md:hidden"
+            >
+              {/* Cyan */}
+              <span
+                className={`block h-[2px] w-6 bg-[#00b7e8] transition-all duration-300 ${
+                  menuOpen ? "translate-y-[7px] rotate-45" : ""
+                }`}
+              />
+
+              {/* Magenta */}
+              <span
+                className={`block h-[2px] w-6 bg-[#ea0a8c] transition-all duration-300 ${
+                  menuOpen ? "opacity-0" : ""
+                }`}
+              />
+
+              {/* White */}
+              <span
+                className={`block h-[2px] w-6 bg-white transition-all duration-300 ${
+                  menuOpen ? "-translate-y-[7px] -rotate-45" : ""
+                }`}
+              />
+            </button>
           </div>
+
+          {/* Mobile Menu */}
+          <div
+            className={`overflow-hidden transition-all duration-500 md:hidden ${
+              menuOpen
+                ? "max-h-[320px] opacity-100"
+                : "max-h-0 opacity-0"
+            }`}
+          >
+            <nav className="border-t border-white/10 px-6 py-6">
+
+              <div className="flex flex-col gap-1">
+
+                <a
+                  href="#services"
+                  onClick={() => setMenuOpen(false)}
+                  className="rounded-lg px-3 py-3 text-zinc-300 transition hover:bg-white/5 hover:text-[#00b7e8]"
+                >
+                  Services
+                </a>
+
+                <a
+                  href="#about"
+                  onClick={() => setMenuOpen(false)}
+                  className="rounded-lg px-3 py-3 text-zinc-300 transition hover:bg-white/5 hover:text-[#ea0a8c]"
+                >
+                  About
+                </a>
+
+                <a
+                  href="#contact"
+                  onClick={() => setMenuOpen(false)}
+                  className="rounded-lg px-3 py-3 text-zinc-300 transition hover:bg-white/5 hover:text-[#fed206]"
+                >
+                  Contact
+                </a>
+
+                <div className="my-3 h-px bg-white/10" />
+
+                <a
+                  href="#contact"
+                  onClick={() => setMenuOpen(false)}
+                  className="px-3 py-3 font-semibold text-white"
+                >
+                  Get a Quote
+                </a>
+
+              </div>
+            </nav>
+          </div>
+
         </header>
       </div>
 

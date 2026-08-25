@@ -90,34 +90,35 @@ export default function Home() {
         </div>
 
         {/* Hero Text */}
-        <div className="mt-12 max-w-3xl">
+        <div className="mt-28 max-w-3xl">
           <h1 className="text-3xl font-bold tracking-tight md:text-4xl">
             Your <span className="text-[#FED206]">imagination.</span> Our fabrication.
           </h1>
 
-          <p className="mx-auto mt-4 max-w-2xl leading-relaxed text-zinc-400">
-            From custom apparel and stickers to graphics and specialty projects,
-            we help bring bold ideas to life.
+          <p className="mt-5 text-lg font-medium text-zinc-200 md:text-xl">
+            The idea can be messy. The execution shouldn&apos;t be.
+          </p>
+
+          <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-zinc-400 md:text-base">
+            From branding and digital design to apparel, stickers, and specialty fabrication, we help shape ideas from first thought to finished piece.
           </p>
 
           <a
-            href="#services"
-            className="mt-8 inline-block text-zinc-400 transition-colors duration-300 hover:text-white"
+            href="#portfolio"
+            className="swift-glitch m-8"
+            data-text="SEE HOW WE BUILD IT"
           >
-            Explore What We Do ↓
+            SEE HOW WE BUILD IT
           </a>
         </div>
 
       </section>
 
 
-      {/* =========================
+     {/* =========================
           SERVICES
       ========================== */}
-      <section
-        id="services"
-        className="px-6 py-28"
-      >
+      <section id="services" className="px-6 py-28">
         <div className="mx-auto max-w-5xl">
 
           {/* Heading */}
@@ -132,52 +133,60 @@ export default function Home() {
             </p>
           </div>
 
-
           {/* Cards */}
-          <div className="group grid gap-6 md:grid-cols-3">
+          <div className="services-grid grid gap-6 md:grid-cols-3">
 
             {/* Design */}
-            <article className="rounded-2xl border border-white/10 bg-[#181818] p-8 transition duration-300 group-hover:opacity-40 hover:!opacity-100 hover:border-white/20">
-              <h3 className="text-2xl font-semibold">
-                Design
-              </h3>
+            <article className="service-card service-card-design">
+              <div className="service-card-shine" />
 
-              <p className="mt-5 text-sm leading-relaxed text-zinc-400">
-                Logos, graphics, illustrations, layouts, and creative assets
-                built to give your project a strong visual identity.
-              </p>
+              <div className="relative">
+                <h3 className="text-2xl font-semibold text-zinc-100">
+                  Design
+                </h3>
+
+                <p className="mt-5 text-sm leading-relaxed text-zinc-400">
+                  Logos, graphics, illustrations, layouts, and creative assets built
+                  to give your project a strong visual identity.
+                </p>
+              </div>
             </article>
-
 
             {/* Print */}
-            <article className="rounded-2xl border border-white/10 bg-[#181818] p-8 transition duration-300 group-hover:opacity-40 hover:!opacity-100 hover:border-white/20">
-              <h3 className="text-2xl font-semibold">
-                Print
-              </h3>
+            <article className="service-card service-card-print">
+              <div className="service-card-shine" />
 
-              <p className="mt-5 text-sm leading-relaxed text-zinc-400">
-                Custom apparel, stickers, decals, banners, and merchandise
-                produced with clean details and bold presentation.
-              </p>
+              <div className="relative">
+                <h3 className="text-2xl font-semibold text-zinc-100">
+                  Print
+                </h3>
+
+                <p className="mt-5 text-sm leading-relaxed text-zinc-400">
+                  Custom apparel, stickers, decals, banners, and merchandise produced
+                  with clean details and bold presentation.
+                </p>
+              </div>
             </article>
 
-
             {/* Create */}
-            <article className="rounded-2xl border border-white/10 bg-[#181818] p-8 transition duration-300 group-hover:opacity-40 hover:!opacity-100 hover:border-white/20">
-              <h3 className="text-2xl font-semibold">
-                Create
-              </h3>
+            <article className="service-card service-card-create">
+              <div className="service-card-shine" />
 
-              <p className="mt-5 text-sm leading-relaxed text-zinc-400">
-                Specialty projects, custom pieces, and branded items made for
-                people who want something different from the standard template.
-              </p>
+              <div className="relative">
+                <h3 className="text-2xl font-semibold text-zinc-100">
+                  Create
+                </h3>
+
+                <p className="mt-5 text-sm leading-relaxed text-zinc-400">
+                  Specialty projects, custom pieces, and branded items made for people
+                  who want something different from the standard template.
+                </p>
+              </div>
             </article>
 
           </div>
         </div>
       </section>
-
 
       {/* =========================
           ABOUT PLACEHOLDER
@@ -196,8 +205,7 @@ export default function Home() {
           </h2>
 
           <p className="mx-auto mt-6 max-w-2xl leading-relaxed text-zinc-400">
-            We believe great creative work comes from conversation,
-            collaboration, experimentation, and craftsmanship.
+            You don&apos;t need a perfect brief or a finished concept. Bring us the idea, and we’ll help shape it through conversation, collaboration, and thoughtful craftsmanship.
           </p>
         </div>
       </section>

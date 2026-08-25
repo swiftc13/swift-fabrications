@@ -331,7 +331,7 @@ export default function Home() {
                   {/* Image */}
                   <div className="overflow-hidden bg-[#121212]">
                     <img
-                      src="/images/portfolio/project-2-cover.JPG"
+                      src="/images/portfolio/project-2-cover.jpg"
                       alt="Swift Fabrications sticker project"
                       className="aspect-[16/9] w-full object-cover transition-transform duration-500 group-hover:scale-[1.025]"
                     />
@@ -378,7 +378,7 @@ export default function Home() {
                   {/* Image */}
                   <div className="overflow-hidden bg-[#121212]">
                     <img
-                      src="/images/portfolio/project-3-cover.JPG"
+                      src="/images/portfolio/project-3-cover.jpg"
                       alt="Swift Fabrications brand identity project"
                       className="h-full min-h-[300px] w-full object-cover transition-transform duration-500 group-hover:scale-[1.025]"
                     />
